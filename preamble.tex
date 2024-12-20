@@ -1,0 +1,92 @@
+% ----------------------------------------------------------------------------------------------------
+
+\usepackage[norwegian]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{titlesec}
+\usepackage[toc, acronyms]{glossaries}
+\usepackage{comment}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\usepackage{subfig}
+
+\addbibresource{resources.bib}
+
+% ----------------------------------------------------------------------------------------------------
+
+\newcommand{\logg}[3]{
+\textbf{#1}
+
+\quad #2\\
+
+#3
+}
+
+% ----------------------------------------------------------------------------------------------------
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% ----------------------------------------------------------------------------------------------------
+
+\makeglossaries
+
+\newglossaryentry{aktivitet}{
+    name=aktivitet,
+    description={\textit{Aktiviteter som er assosiert med produksjon, som transport, lagring, kasting av en \gls{item}} \cite{agicap_abc}}
+}
+
+\newglossaryentry{item}{
+    name=vare,
+    description={Produktet i produksjonen som skal bli analysert}
+}
+
+\newglossaryentry{sprint}{
+    name=sprint,
+    description={Tids-periode hvor man jobber med spesifikke oppgaver}
+}
+
+\newglossaryentry{issue_board}{
+    name={issue board},
+    description={Metode for å planlagge, organisere og visualisere arbeidsflyt for en produktfunksjon. Består av flere \gls{issue}s}
+}
+
+\newglossaryentry{issue}{
+    name={issue},
+    description={Planlagt implementering av en del av en produktfunksjon}
+}
+
+\newglossaryentry{git}{
+    name={git},
+    description={Et versjonskontrollsystem som sporer versjoner av filer}
+}
+
+\newglossaryentry{trace}{
+    name={TRACE Insight},
+    description={Hovedapplikasjonen til virksomheten}
+}
+
+\newacronym{ntnu}{NTNU}{Norges teknisk-naturvitenskapelige universitet}
+
+\newacronym{abc}{ABC}{Aktivitetsbasert kostnad}
+
+\newacronym{rnd}{RnD}{Research and Development}
+
+\newacronym{api}{API}{Application Programming Interface}
+
+\newacronym{vsc}{VS Code}{Visual Studio Code}
+
+\newacronym{i18n}{i18n}{internationalization}
+
+\newacronym{ide}{IDE}{Integrated Development Environment}
+
+\newacronym{sql}{SQL}{Structured Query Language}
